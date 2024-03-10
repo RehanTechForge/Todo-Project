@@ -1,0 +1,150 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.todo-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+}
+
+#todo-form {
+    display: flex;
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#todo-input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#todo-input:focus {
+    border-color: #007bff;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list li {
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 1;
+}
+
+#todo-list li:hover {
+    background-color: #f8f9fa;
+}
+
+#todo-list li.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+    opacity: 1;
+}
+
+/* Button styles for edit, delete, and complete */
+.edit-btn,
+.delete-btn,
+.complete-btn {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #bd2130;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.complete-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.complete-btn:hover {
+    background-color: #218838;
+}
+
+/* Add a strikethrough for completed tasks */
+.task-completed {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.task-completed {
+    text-decoration: line-through;
+    color: #6c757d;
+    /* Adjust the color as needed */
+}
+
+/* Animation keyframes */
+/* Animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* Set the initial opacity to 0 for fade-in effect */
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
